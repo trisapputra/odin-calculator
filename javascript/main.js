@@ -16,4 +16,6 @@ function divideOperator (firstNumber, secondNumber) {
 };
 
 
-
+function operate (callback, firstNumber, secondNumber) {
+    return callback(firstNumber, secondNumber)
+}
