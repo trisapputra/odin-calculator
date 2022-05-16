@@ -1,0 +1,56 @@
+body {
+    font-size: 28px;
+    
+}
+ 
+
+.container.main {
+    border: solid 4px black;
+    margin: auto;
+    width: fit-content;
+    padding: 6px;
+    background-color: cadetblue;
+}
+.container.display {
+    background-color: lightsteelblue;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    height: 60px;
+    border: solid 2px black;
+}
+
+button {
+    font-size: inherit;
+    margin: 2px;
+    width: 48px;
+    height: 48px;
+}
+
+#ac {
+    width: 107px;
+}
+
+#zero {
+    width: 166px;
+}
+
+.firstSect button,
+#plus,
+#minus,
+#dot{
+    background-color: coral;
+    border: solid 2px black;
+}
+
+.secondSect button,
+.thirdSect button,
+.fourthSect button,
+.fifthSect button
+{
+    background-color: slateblue;
+    border: solid 2px black;
+}
+
+#equal {
+    background-color: chartreuse;
+}
