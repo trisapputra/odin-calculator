@@ -1,7 +1,8 @@
 function addOperator (firstNumber, secondNumber) {
 	let addValue = firstNumber + secondNumber
-	display = addValue
-	return console.log(display);
+	;
+	display = addValue;
+	;
 };
 
 function subtractOperator (firstNumber, secondNumber) {
@@ -58,8 +59,8 @@ buttonOperators.forEach((operator) => {
 			secondNumber = numberValue; 
 			addOperator(firstNumber, secondNumber);
 			const displayNumber = document.getElementById('displayNumber');	 
-			displayNumber.textContent = display ;
-			firstNumber = 0;
+			displayNumber.textContent = display;
+			firstNumber = display;
 			secondNumber = 0;
 		} 
 			
