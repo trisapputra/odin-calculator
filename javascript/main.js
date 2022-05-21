@@ -104,7 +104,7 @@ zeroButton.addEventListener('click', (e) => {
 	const displayNumber = document.getElementById('displayNumber');		 
 	displayNumber.textContent = display ;}
 
-	if (operatorId = "divide"){
+	if (operatorId == "divide"){
 		alert("dont divide with zero!!")
 	}
 	else if (display == "") {
@@ -143,4 +143,19 @@ equalButton.addEventListener('click', () => {
 		secondNumber = 0;
 	} 
 		
+});
+
+
+const acButton = document.getElementById('ac');
+acButton.addEventListener('click', () => {
+ 	display = "";
+
+	firstNumber = 0;
+
+	secondNumber = 0;
+
+	operatorId = "";
+
+	const displayNumber = document.getElementById('displayNumber');	 
+	displayNumber.textContent = "";
 })
