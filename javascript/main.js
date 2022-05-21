@@ -19,3 +19,13 @@ function divideOperator (firstNumber, secondNumber) {
 function operate (callback, firstNumber, secondNumber) {
     return callback(firstNumber, secondNumber)
 }
+
+
+
+const buttonNumbers = document.querySelectorAll('button.number');
+
+buttonNumbers.forEach((number) => {
+	number.addEventListener('click', (e) => {
+		console.log(e.target.value)
+	})
+} )
