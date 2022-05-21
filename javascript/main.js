@@ -104,7 +104,10 @@ zeroButton.addEventListener('click', (e) => {
 	const displayNumber = document.getElementById('displayNumber');		 
 	displayNumber.textContent = display ;}
 
-	if (display == "") {
+	if (operatorId = "divide"){
+		alert("dont divide with zero!!")
+	}
+	else if (display == "") {
 		zeroAdder()
 	} else if (display == "0") {
 		display = "0";
@@ -121,15 +124,23 @@ dotButton.addEventListener( 'click', () => {
 		display += "."	 
 		displayNumber.textContent = display ;
  
-	// let decimal = e.target.value.toString();
-	//  console.log(decimal)
-	// function decimalAdder () {
-	// 	display += decimal;
-	// 	const displayNumber = document.getElementById('displayNumber');		 
-	// 	displayNumber.textContent = display ;}
-	
 
-	// if (display == "0" ){
-	// 	 display += ".";
-	// } 
+})
+
+
+
+
+const equalButton = document.getElementById('equal')
+equalButton.addEventListener('click', () => {
+	if ( firstNumber == 0 ){
+		alert("there is no operation");
+	} else if ( secondNumber == 0 ){
+		secondNumber = +display; 
+		operate(firstNumber, secondNumber);
+		const displayNumber = document.getElementById('displayNumber');	 
+		displayNumber.textContent = display;
+		firstNumber = display;
+		secondNumber = 0;
+	} 
+		
 })
