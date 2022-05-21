@@ -1,5 +1,7 @@
 function addOperator (firstNumber, secondNumber) {
-	return firstNumber + secondNumber;
+	let addValue = firstNumber + secondNumber
+	display = addValue
+	return console.log(display);
 };
 
 function subtractOperator (firstNumber, secondNumber) {
@@ -24,19 +26,50 @@ function operate (callback, firstNumber, secondNumber) {
 
 let display = "";
 
+let firstNumber = 0;
+
+let secondNumber = 0;
+
 
 
 
 const buttonNumbers = document.querySelectorAll('button.number');
-
 buttonNumbers.forEach((number) => {
 	number.addEventListener('click', (e) => {
 
-		let stringValue = e.target.value.toString();		
+		let stringValue = e.target.value.toString();
+		display += stringValue;
 		const displayNumber = document.getElementById('displayNumber');		 
-		displayNumber.textContent += stringValue ;
+		displayNumber.textContent = display ;
+
+		
+	});
+} );
+
+const buttonOperators = document.querySelectorAll('.operator');
+buttonOperators.forEach((operator) => {
+	operator.addEventListener('click', () => {
+		
+		let numberValue = Number(display);
+
+		if ( firstNumber == 0 ){
+			firstNumber = numberValue;
+		} else if ( secondNumber == 0 ){
+			secondNumber = numberValue; 
+			addOperator(firstNumber, secondNumber);
+			const displayNumber = document.getElementById('displayNumber');	 
+			displayNumber.textContent = display ;
+			firstNumber = 0;
+			secondNumber = 0;
+		} 
+			
+		
+	
+		 display = "";
+		
 
 		
 	})
 } )
+
 
