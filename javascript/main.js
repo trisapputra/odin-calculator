@@ -22,10 +22,21 @@ function operate (callback, firstNumber, secondNumber) {
 
 
 
+let display = "";
+
+
+
+
 const buttonNumbers = document.querySelectorAll('button.number');
 
 buttonNumbers.forEach((number) => {
 	number.addEventListener('click', (e) => {
-		console.log(e.target.value)
+
+		let stringValue = e.target.value.toString();		
+		const displayNumber = document.getElementById('displayNumber');		 
+		displayNumber.textContent += stringValue ;
+
+		
 	})
 } )
+
